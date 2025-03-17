@@ -5,9 +5,18 @@ import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
   BarChart, Bar
 } from 'recharts'
+// Import icons individually to ensure compatibility with any lucide-react version
 import { 
-  LayoutDashboard, Users, Mail, BarChart2, Settings, Search, 
-  Bell, User, ChevronDown, CheckCircle
+  LayoutDashboard, 
+  Users,
+  Mail, 
+  BarChart2 as BarChartIcon, 
+  Settings, 
+  Search, 
+  Bell, 
+  User, 
+  ChevronDown, 
+  CheckCircle
 } from 'lucide-react'
 import { 
   mockCreators, mockGrowthData, mockEngagementStats,
@@ -58,7 +67,7 @@ export default function Dashboard() {
           <NavItem icon={<LayoutDashboard size={20} />} label="Dashboard" active collapsed={sidebarCollapsed} />
           <NavItem icon={<Users size={20} />} label="Recruitment" collapsed={sidebarCollapsed} />
           <NavItem icon={<Mail size={20} />} label="Messages" collapsed={sidebarCollapsed} />
-          <NavItem icon={<BarChart2 size={20} />} label="Program" collapsed={sidebarCollapsed} />
+          <NavItem icon={<BarChartIcon size={20} />} label="Program" collapsed={sidebarCollapsed} />
           <NavItem icon={<Settings size={20} />} label="Settings" collapsed={sidebarCollapsed} />
         </nav>
       </div>
@@ -375,7 +384,7 @@ function StatCard({ title, value, color }: { title: string; value: string; color
     <div className="bg-white rounded-lg shadow-sm p-4 hover:shadow-md transition-shadow">
       <div className="flex items-center">
         <div className={`${color} h-10 w-10 rounded-lg flex items-center justify-center text-white`}>
-          <BarChart2 size={20} />
+          <BarChartIcon size={20} />
         </div>
         <div className="ml-4">
           <h3 className="text-sm font-medium text-gray-500">{title}</h3>
